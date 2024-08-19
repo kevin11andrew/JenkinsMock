@@ -1,1 +1,24 @@
+pipeline {
+    agent any
 
+    stages {
+        stage('Development') {
+            steps {
+                echo 'Development'
+                sh 'git clone https://github.com/kevin11andrew/JenkinsMock.git'
+            }
+        }
+        
+        stage('QA') {
+            steps {
+                echo 'QA'
+            }
+        }
+        
+        stage('Testing') {
+            steps {
+                echo 'Testing'
+            }
+        }
+    }
+}
